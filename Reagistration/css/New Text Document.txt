@@ -1,0 +1,12 @@
+<div class="form-group col-lg-6" runat ="server">
+                    <asp:Label runat ="server">User Name*</asp:Label>
+                    <asp:TextBox ID ="userbx" runat ="server" type="text"  class="form-control" name="name" Placeolder ="You will use this to login in Shikkhanobish"></asp:TextBox>
+                </div>
+                <div class="form-group col-lg-3">
+                    <asp:Label runat ="server">Password*</asp:Label>
+                    <asp:TextBox ID ="passbx" runat ="server" type="text"  class="form-control" name="name"></asp:TextBox>
+                </div>
+                <div class="form-group col-lg-3">
+                    <asp:Label runat ="server">Confirm Password*</asp:Label>
+                    <asp:TextBox ID ="cPassbx" runat ="server" type="text"  class="form-control" name="name"></asp:TextBox>
+                </div>
