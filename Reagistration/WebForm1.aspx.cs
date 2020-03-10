@@ -47,6 +47,8 @@ namespace Reagistration
 		protected void register_Click(object sender, System.EventArgs e)
 		{
 			Erroetxt.Text = "lool";
+
+			string pnumber = 
 			/*
 			string url = "https://api.shikkhanobish.com/api/Master/GetInfoByLogin";
 			HttpClient client = new HttpClient();
