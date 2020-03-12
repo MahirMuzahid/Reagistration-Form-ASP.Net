@@ -323,7 +323,6 @@
             }
         }
 
-
         function ScirnceNT() {
             var check = 0;
 
@@ -428,11 +427,15 @@
 
                 document.getElementById("CheckBox14").checked = false;
                 document.getElementById("CheckBox19").checked = false;
+                document.getElementById("CheckBox14").disabled = true;
+                document.getElementById("CheckBox19").disabled = true;
 
                 document.getElementById("CheckBox10").disabled = false;
                 document.getElementById("CheckBox11").disabled = false;
                 document.getElementById("CheckBox12").disabled = false;
                 document.getElementById("CheckBox13").disabled = false;
+
+                document.getElementById("CheckBox10").style.color = "blue";
 
                 document.getElementById("CheckBox15").disabled = true;
                 document.getElementById("CheckBox16").disabled = true;
@@ -451,12 +454,16 @@
                 document.getElementById("CheckBox11").checked = false;
                 document.getElementById("CheckBox12").checked = false;
                 document.getElementById("CheckBox13").checked = false;
+                document.getElementById("CheckBox14").disabled = false;
+                document.getElementById("CheckBox19").disabled = false;
             }
 
             if (document.getElementById("CheckBox14").checked) {
 
                 document.getElementById("CheckBox9").checked = false;
                 document.getElementById("CheckBox19").checked = false;
+                document.getElementById("CheckBox9").disabled = true;
+                document.getElementById("CheckBox19").disabled = true;
 
                 document.getElementById("CheckBox15").disabled = false;
                 document.getElementById("CheckBox16").disabled = false;
@@ -480,12 +487,16 @@
                 document.getElementById("CheckBox16").checked = false;
                 document.getElementById("CheckBox17").checked = false;
                 document.getElementById("CheckBox18").checked = false;
+                document.getElementById("CheckBox9").disabled = false;
+                
             }
 
             if (document.getElementById("CheckBox19").checked) {
 
                 document.getElementById("CheckBox9").checked = false;
                 document.getElementById("CheckBox14").checked = false;
+                document.getElementById("CheckBox9").disabled = true;
+                document.getElementById("CheckBox14").disabled = true;
 
                 document.getElementById("CheckBox10").disabled = true;
                 document.getElementById("CheckBox11").disabled = true;
@@ -506,6 +517,7 @@
                 document.getElementById("CheckBox21").disabled = true;
                 document.getElementById("CheckBox20").checked = false;
                 document.getElementById("CheckBox21").checked = false;
+
             }
            
         }
@@ -515,6 +527,8 @@
 
                 document.getElementById("CheckBox37").checked = false;
                 document.getElementById("CheckBox42").checked = false;
+                document.getElementById("CheckBox37").disabled = true;
+                document.getElementById("CheckBox42").disabled = true;
 
                 document.getElementById("CheckBox29").disabled = false;
                 document.getElementById("CheckBox30").disabled = false;
@@ -551,6 +565,9 @@
                 document.getElementById("CheckBox34").checked = false;
                 document.getElementById("CheckBox35").checked = false;
                 document.getElementById("CheckBox36").checked = false;
+
+                document.getElementById("CheckBox37").disabled = false;
+                document.getElementById("CheckBox42").disabled = false;
             }
 
 
@@ -558,6 +575,8 @@
 
                 document.getElementById("CheckBox28").checked = false;
                 document.getElementById("CheckBox42").checked = false;
+                document.getElementById("CheckBox28").disabled = true;
+                document.getElementById("CheckBox42").disabled = true;
 
                 document.getElementById("CheckBox29").disabled = true;
                 document.getElementById("CheckBox30").disabled = true;
@@ -574,7 +593,7 @@
                 document.getElementById("CheckBox41").disabled = false;
 
 
-                document.getElementById("CheckBox43").disabled = true;
+                document.getElementById("CheckBox43").disabled = false;
             }
             else if (!document.getElementById("CheckBox37").checked) {
                 document.getElementById("CheckBox38").disabled = true;
@@ -586,12 +605,16 @@
                 document.getElementById("CheckBox39").checked = false;
                 document.getElementById("CheckBox40").checked = false;
                 document.getElementById("CheckBox41").checked = false;
+
+                document.getElementById("CheckBox28").disabled = false;
             }
 
             if (document.getElementById("CheckBox42").checked) {
 
                 document.getElementById("CheckBox37").checked = false;
                 document.getElementById("CheckBox28").checked = false;
+                document.getElementById("CheckBox28").disabled = true;
+                document.getElementById("CheckBox37").disabled = true;
 
                 document.getElementById("CheckBox29").disabled = true;
                 document.getElementById("CheckBox30").disabled = true;
@@ -700,11 +723,13 @@
 
 .input {
                padding: -10px;
-               margin: 3px;
-               vertical-align: top;
+               margin: 5px;
+               vertical-align: middle;
                position: center;
                top: 4px;
                *overflow: hidden;
+               text-align: center;
+               
 }
 #namebx {
     color:black;
@@ -913,12 +938,15 @@
                 <div class="col-lg-12" runat ="server">
                     <label style="font-size:12px; color:mediumpurple;">[You can choose 3 subject from class 9-10 group subject]</label>
                 </div>
-                <div class="col-lg-12" runat ="server">
+                <div class="col-lg-1" runat ="server">
+                   
+                </div>
+                <div class="col-lg-11" runat ="server">
                     <asp:CheckBox ID="CheckBox9" runat="server" CssClass="input" onclick="NTScience()" TextAlign="Left"/>  <label style="font-weight:bold">Science</label>
                 </div>
 
                 <div class="col-lg-12" runat ="server">
-                    <asp:CheckBox ID="CheckBox10" runat="server" CssClass="input" onclick="ScirnceNT()"  TextAlign="Left"/>  <label style="font-size:13px">Physics</label>
+                    <asp:CheckBox ID="CheckBox10" runat="server" CssClass="input" onclick="ScirnceNT()" TextAlign="Right" /> <label style="font-size:13px">Physics</label>
                 </div>
                 <div class="col-lg-12" runat ="server">
                     <asp:CheckBox ID="CheckBox11" runat="server" CssClass="input" onclick="ScirnceNT()"  TextAlign="Left"/>  <label style="font-size:13px">Chemistry</label>
@@ -931,8 +959,10 @@
                     </div>
 
 
-
-                <div class="col-lg-12" runat ="server">
+                <div class="col-lg-1" runat ="server">
+                   
+                </div>
+                <div class="col-lg-11" runat ="server">
                     <asp:CheckBox ID="CheckBox14" runat="server" CssClass="input" onclick="NTScience()"  TextAlign="Left"/>  <label style="font-weight:bold">Commerce</label>
                 </div>
                 <div class="col-lg-12" runat ="server">
@@ -949,8 +979,10 @@
                     </div>
 
 
-
-                <div class="col-lg-12" runat ="server">
+                <div class="col-lg-1" runat ="server">
+                   
+                </div>
+                <div class="col-lg-11" runat ="server">
                     <asp:CheckBox ID="CheckBox19" runat="server" CssClass="input" onclick="NTScience()"  TextAlign="Left"/>  <label style="font-weight:bold">Arts</label>
                 </div>
                 <div class="col-lg-12" runat ="server">
@@ -1003,7 +1035,10 @@
                 <div class="col-lg-12" runat ="server">
                     <label style="font-size:12px; color:mediumpurple;">[You can choose 6 subject from class 11-12 science group or 3 subject from commerce group ]</label>
                 </div>
-                <div class="col-lg-12" runat ="server">
+                <div class="col-lg-1" runat ="server">
+                   
+                </div>
+                <div class="col-lg-11" runat ="server">
                     <asp:CheckBox ID="CheckBox28" runat="server" CssClass="input"  onclick="ETGroup()"  TextAlign="Left"/>  <label style="font-weight:bold">Science</label>
                 </div>
 
@@ -1033,8 +1068,10 @@
                     </div>
 
 
-
-                <div class="col-lg-12" runat ="server">
+                <div class="col-lg-1" runat ="server">
+                   
+                </div>
+                <div class="col-lg-11" runat ="server">
                     <asp:CheckBox ID="CheckBox37" runat="server" CssClass="input" onclick="ETGroup()"  TextAlign="Left"/>  <label style="font-weight:bold">Commerce</label>
                 </div>
                 <div class="col-lg-12" runat ="server">
@@ -1051,8 +1088,10 @@
                     </div>
 
 
-
-                <div class="col-lg-12" runat ="server">
+                <div class="col-lg-1" runat ="server">
+                   
+                </div>
+                <div class="col-lg-11" runat ="server">
                     <asp:CheckBox ID="CheckBox42" runat="server" CssClass="input" onclick="ETGroup()"  TextAlign="Left"/>  <label style="font-weight:bold">Arts</label>
                 </div>
                 <div class="col-lg-12" runat ="server">
